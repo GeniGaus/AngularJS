@@ -1,16 +1,16 @@
 (function(root, factory) {
-  'use strict'
-  /* istanbul ignore next */
-  if (typeof define === 'function' && define.amd) {
+  "use strict"
+
+  if (typeof define === "function" && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['angular'], factory)
-  } else if (typeof module === 'object' && module.exports) {
+    define(["angular"], factory)
+  } else if (typeof module === "object" && module.exports) {
     // Node. Does not work with strict CommonJS, but
     // only CommonJS-like environments that support module.exports,
     // like Node.
     // to support bundler like browserify
-    var angularObj = angular || require('angular')
-    if ((!angularObj || !angularObj.module) && typeof angular != 'undefined') {
+    var angularObj = angular || require("angular")
+    if ((!angularObj || !angularObj.module) && typeof angular != "undefined") {
       angularObj = angular
     }
     module.exports = factory(angularObj)
@@ -19,18 +19,20 @@
     factory(root.angular)
   }
 })(this, function(angular){
-	'use strict'
+	"use strict"
 	
 	var module = angular
 		.module("ngCustomAccordion", [])
 		.directive("gmCustomAccordion", function(){
 			return {
-				restrict: 'E',
-				templateUrl: 'ngcustomaccordion.html',
+				restrict: "E",
+				templateUrl: "ngcustomaccordion.html",
 				scope: {},
 				bindToController: {
-					title : '@title',
-					emptydatamsg : '@emptydatamsg'
+					title : "@title",
+					emptydatamsg : "@emptydatamsg",
+					datacontainerlist: "@datacontainerlist",
+					datalist: "@datalist"
 				},
 				controller: function($scope){
 					var vm = this;
