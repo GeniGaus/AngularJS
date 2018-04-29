@@ -1,0 +1,55 @@
+.nca_colHeader{
+	width: 97%;
+	background-color: #D3D3D3;
+	border-color: #000000;
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px;
+	font-weight: 800;
+	font-size: 25px;
+}
+
+.nca_colWrap{
+	float: left;
+	width: 31%;
+	min-height: 200px;
+	background-color: #D3D3D3;
+	border-radius: 5px;
+	border: solid 2px;
+	border-color: #FFFFFF;
+	padding: 10px;
+}
+
+.nca_dataContainerHeader{
+	margin: 5px;
+	height: 25px;
+	border-radius: 5px;
+	background: #151B54;
+	color: #FFFFFF;
+	padding: 10px;
+}
+
+.nca_dataContainerDataContentWrap{
+	padding-left: 10px;
+}
+
+.nca_icon{
+	font-weight: 800;
+	font-size: 25px;
+	padding-right: 10px;
+	float: right;
+}
+
+.nca_title{
+	font-weight: 800;
+	font-size: 20px;
+}
+
+.nca_text{
+	font-weight: 800;
+	font-size: 15px;
+}
+
+.active{
+	opacity: 0.5;
+}
