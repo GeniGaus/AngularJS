@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AngularJS Custom Accordion</title>
   <link rel="stylesheet" href="../src/ngcustomaccordion.css"/>
+  <script src="../src/ngcustomaccordion.js" type="text/javascript"></script>
+  <script src="accordionDemo.js" type="text/javascript"></script>
 </head>
 
-<body ng-app="ngCustomAccordionDemo">
-  <gm-custom-accordion title="{{Title}}" emptydatamsg="{{Msg}}"></gm-custom-accordion>
+<body ng-app="ngCustomAccordionDemo" ng-controller="depEmpCtrl">
+  <gm-custom-accordion title="{{Title}}" emptydatamsg="{{Msg}}" datacontainerlist="{{deptList}}" datalist="{{empList}}"></gm-custom-accordion>
 </body>
 </html>
