@@ -1,4 +1,4 @@
-var loadDependencies = [];
+var loadDependencies = ['ngCustomAccordion'];
 var demoApp = angular.module("ngCustomAccordionDemo", loadDependencies);
 
 demoApp.controller("depEmpCtrl", function($scope){
