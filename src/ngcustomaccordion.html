@@ -1,7 +1,7 @@
 <div class="nca_dataContainerOuterWrap">
-	<div class="nca_colHeader">{{title}}</div>
+	<div class="nca_colHeader">{{vm.title}}</div>
 	<div class="nca_colWrap" ng-repeat="col in cols">
-		<div class="nca_dataContainerWrap" ng-repeat="datacontainer in colFilteredDataList = (datacontainerlist | filter: {colIndex : col} : true)">
+		<div class="nca_dataContainerWrap" ng-repeat="datacontainer in colFilteredDataList = (vm.datacontainerlist | filter: {colIndex : col} : true)">
 			<div class="nca_dataContainerHeader" ng-class="{active:accordionState == datacontainer.ID}" ng-style="{'background-color':{{getStyle(datacontainer.colorID)}}[0].hexCode}" ng-click="toggleAccordion(datacontainer.ID);">
 				<span class="nca_title">{{datacontainer.Name}}</span>
 				<span class="nca_icon" ng-hide="accordionState == datacontainer.ID">+</span>
@@ -12,12 +12,12 @@
 					<span class="nca_text" ng-repeat="(key, value) in data">{{key}}</span>
 				</div>
 				<hr ng-show="datacontainerFilteredDataList.length > 0" />
-				<div class="nca_dataContent" ng-repeat="data in datacontainerFilteredDataList = (datalist | filter: {datacontainerID : datacontainer.ID} : true)">
+				<div class="nca_dataContent" ng-repeat="data in datacontainerFilteredDataList = (vm.datalist | filter: {datacontainerID : datacontainer.ID} : true)">
 					<span class="nca_text" ng-repeat="(key, value) in data">{{value}}</span>
 					<hr ng-hide="$last" />
 				</div>
 				<div class="nca_dataContent" ng-show="datacontainerFilteredDataList.length <= 0">
-					<span class="nca_text">{{emptydatamsg}}</span>
+					<span class="nca_text">{{vm.emptydatamsg}}</span>
 				</div>
 			</div>
 		</div>
