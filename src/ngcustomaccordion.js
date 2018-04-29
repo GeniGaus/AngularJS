@@ -26,19 +26,22 @@
 		.directive("gmCustomAccordion", function(){
 			return {
 				restrict: 'E',
-				templateUrl: '/ngcustomaccordion.html',
+				templateUrl: 'ngcustomaccordion.html',
 				scope: {},
-				bindToController: {},
+				bindToController: {
+					title : '@title',
+					emptydatamsg : '@emptydatamsg'
+				},
 				controller: function($scope){
 					var vm = this;
 					vm.colMax = 3;
 					vm.cols = [];
 					vm.accordionState = -1;
 					vm.colorList = [{"hexCode": "#493D26"},
-									   {"hexCode": "#C47451"},
-									   {"hexCode": "#E77471"},
-									   {"hexCode": "#7D0552"},
-									   {"hexCode": "#2B547E"}];
+								   {"hexCode": "#C47451"},
+								   {"hexCode": "#E77471"},
+								   {"hexCode": "#7D0552"},
+								   {"hexCode": "#2B547E"}];
 					
 					for(var i = 1; i <= vm.colMax; i++){
 						vm.cols.push(i);
